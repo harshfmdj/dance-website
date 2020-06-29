@@ -1,0 +1,18 @@
+extends base.pug
+
+block scripts
+  script(src='/static/index.js')
+
+block style
+    style
+      include ../static/style.css
+      include ../static/styleContact.css
+
+block content
+    div.container
+        h1 Sign In
+        form(action="/signin", method="post", class="myForm")
+            input(type="email", class="myInput", name="name", placeholder="Enter your email/phone number")
+            input(type="text", class="myInput", name="password", placeholder="Enter your password")
+            button(class="btn")
+                | Submit

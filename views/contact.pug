@@ -10,12 +10,12 @@ block style
 
 block content
     div.container
-        h1 Contact Us
+        h1 Sign Up
         form(action="/contact", method="post", class="myForm")
             input(type="text", class="myInput", name="name", placeholder="Enter your name")
             input(type="phone", class="myInput", name="phone", placeholder="Enter your phone number")
             input(type="email", class="myInput", name="email", placeholder="Enter your email id")
             input(type="text", class="myInput", name="address", placeholder="Enter your address")
-            input(type="text", class="myInput", name="desc", placeholder="Enter your concern")
+            input(type="password", class="myInput", name="password", placeholder="Set your password")
             button(class="btn")
                 | Submit
