@@ -4,6 +4,7 @@ const path = require("path");
 const app = express();
 const mongoose = require('mongoose');
 const bodyparser = require("body-parser");
+const { isNullOrUndefined } = require("util");
 
 mongoose.connect('mongodb://localhost/Login', { useNewUrlParser: true });
 const port = 8000;
@@ -51,7 +52,7 @@ app.post('/signin', (req, res) => {
             return res.status(500).send();
         }
         if (!user) {
-            return res.status(404).render('contact.pug')
+            return res.status(404).render("contact.pug");
 
         }
         return res.status(200).render('home.pug');
